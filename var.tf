@@ -10,5 +10,7 @@ variable "LB_PUBLIC" {
 variable "LB_PRIVATE" {
   default = false
 }
-variable "LB_RULE_PRIORITY" {}
+variable "LB_RULE_PRIORITY" {
+  default = false
+}
 
