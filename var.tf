@@ -11,3 +11,4 @@ variable "LB_PRIVATE" {
   default = false
 }
 variable "LB_RULE_PRIORITY" {}
+
