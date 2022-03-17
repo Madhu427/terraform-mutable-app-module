@@ -41,7 +41,7 @@ resource "aws_lb_target_group_attachment" "tg-attachment" {
 
     condition {
       host_header {
-        values = ["${var.COMPONENT}.${ENV}.roboshop.internal"]
+        values = ["${var.COMPONENT}-${ENV}.roboshop.internal"]
       }
     }
   }
