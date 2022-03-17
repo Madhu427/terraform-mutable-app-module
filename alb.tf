@@ -41,7 +41,7 @@ resource "aws_lb_listener" "lb-listener" {
 
     condition {
       host_header {
-        values = ["${var.COMPONENT}-${ENV}.roboshop.internal"]
+        values = ["${var.COMPONENT}-${var.ENV}.roboshop.internal"]
       }
     }
   }
