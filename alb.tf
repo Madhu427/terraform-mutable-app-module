@@ -21,7 +21,7 @@ resource "aws_lb_listener" "lb-listener" {
     type             = "forward"
     target_group_arn = aws_lb_target_group.tg.arn
   }
-
+}
 
   resource "aws_lb_listener_rule" "static" {
     count        = var.LB_PRIVATE ? 1 : 0
