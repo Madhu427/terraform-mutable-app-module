@@ -33,11 +33,6 @@ resource "aws_lb_listener" "lb-listener" {
       target_group_arn = aws_lb_target_group.tg.arn
     }
 
-    condition {
-      path_pattern {
-        values = ["/static/*"]
-      }
-    }
 
     condition {
       host_header {
