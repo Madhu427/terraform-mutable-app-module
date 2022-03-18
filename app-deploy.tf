@@ -12,7 +12,7 @@ resource "null_resource" "app_deploy" {
     }
 
     inline = [
-      "ansible-pull -U https://github.com/Madhu427/ansible.git roboshop.yml -e COMPONENT=${var.COMPONENT} -e ENV=${var.ENV} -e APP_VERSION=${var.APP_VERSION} -e NEXUS_USERNAME=${local.NEXUS_USERNAME} -e NEXUS_PASSOWRD=${local.NEXUS_PASSWORD}"
+      "ansible-pull -i  localhost, -U https://github.com/Madhu427/ansible.git roboshop.yml -e COMPONENT=${var.COMPONENT} -e ENV=${var.ENV} -e APP_VERSION=${var.APP_VERSION} -e NEXUS_USERNAME=${local.NEXUS_USERNAME} -e NEXUS_PASSOWRD=${local.NEXUS_PASSWORD}"
     ]
   }
 }
