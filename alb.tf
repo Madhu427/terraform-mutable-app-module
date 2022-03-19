@@ -10,7 +10,7 @@ resource "aws_lb_target_group" "tg" {
     interval            = 5
     path                = "/health"
     port                = var.APP_PORT
-    timeout             = 10
+    timeout             = 3
   }
 }
 
