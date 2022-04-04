@@ -4,6 +4,7 @@ resource "null_resource" "app_deploy" {
     app_version  = var.APP_VERSION
   }
   count = length(aws_spot_instance_request.ec2-spot)
+
   provisioner "remote-exec" {
     connection {
       type     = "ssh"
