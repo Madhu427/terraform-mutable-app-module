@@ -27,6 +27,7 @@ resource "aws_security_group" "sg" {
     protocol         = "tcp"
     cidr_blocks      = concat(data.terraform_remote_state.vpc.outputs.PRIVATE_SUBNET_CIDR, tolist([data.terraform_remote_state.vpc.outputs.DEFAULT_VPC_CIDR]))
   }
+
   egress {
     from_port        = 0
     to_port          = 0
